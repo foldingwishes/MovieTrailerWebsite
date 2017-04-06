@@ -16,8 +16,8 @@
 </p>
 
 <br>
+<img src="http://www.devjeanie.com/udacity/movietrailers/fmtw.PNG" style="width:100%">
 
-<img src="http://devjeanie.com/udacity/movietrailers/fmtw.PNG" style="width:100%">
 
 
 ## About
