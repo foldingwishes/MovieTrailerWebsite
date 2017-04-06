@@ -17,7 +17,7 @@ main_page_head = '''
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <link rel="icon" 
       type="image/png" 
-      href="movie-icon-27.png">
+      href="images/movie-icon-27.png">
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
@@ -59,7 +59,7 @@ main_page_head = '''
             background-color: white;
         }
     </style>
-    <link rel="stylesheet" href="stylemod.css">
+    <link rel="stylesheet" href="stylemod.css?v=1.2">
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
         $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
@@ -127,7 +127,10 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <div class="tooltip">{storyline}</div>
 </div>
+
+
 '''
 
 def create_movie_tiles_content(movies):
@@ -143,7 +146,8 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            storyline=movie.storyline
         )
     return content
 
